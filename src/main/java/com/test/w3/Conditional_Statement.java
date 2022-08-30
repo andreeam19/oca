@@ -2,7 +2,11 @@ package com.test.w3;
 
 import java.util.Scanner;
 
+
 public class Conditional_Statement {
+    public static void main(String[] args) {
+        ex4();
+    }
 
 
     //1. Write a Java program to get a number from the user and print whether it is positive or negative
@@ -11,20 +15,18 @@ public class Conditional_Statement {
     //Expected Output :
     //Number is positive
     public static void ex1() {
-
         Scanner in = new Scanner(System.in);
 
-        System.out.println("Input a number:");
-        int num = in.nextInt();
+        System.out.println("Input number: ");
+        int number = in.nextInt();
 
-        if (num > 0) {
-            System.out.println("Number is positive");
-        } else if (num < 0) {
-            System.out.println("Number is negative");
+        if (number > 0) {
+            System.out.println("Number is pozitiv");
         } else {
-            System.out.println("Number is zero");
-
+            System.out.println("Number is negativ");
         }
+
+
     }
 
     //2. Write a Java program to solve quadratic equations (use if, else if and else). Go to the editor
@@ -36,52 +38,10 @@ public class Conditional_Statement {
     //Expected Output :
     //The roots are -0.20871215252208009 and -4.7912878474779195
     public static void ex2() {
-        Scanner in = new Scanner(System.in);
-
-        System.out.println(" Input first number: ");
-        double a = in.nextDouble();
-
-        System.out.println("Input second number: ");
-        double b = in.nextDouble();
-        System.out.println("Input third number: ");
-        double c = in.nextDouble();
-
-        double result = b * b - 4 * a * c;
-        if (result > 0.00) {
-            double r1 = -b + Math.pow(result, 0.5) / (2.0 * a);
-            double r2 = -b - Math.pow(result, 0.5) / (2.0 * a);
-            System.out.println(" The roots are " + r1 + "and" + r2);
-
-        } else if (result == 0.0) {
-            double r1 = -b / (2.0 * a);
-            System.out.println("The root is" + r1);
-        } else {
-            System.out.println("The equation is not ok");
-
-        }
-    }
-
-    public static double pow(double e, double x) {
-        double result = 1;
-        while (x > 0) {
-            result = result * e;
-
-            x--;
-        }
-        return result;
-
 
     }
 
-    public static int factorial(int x) {
-        int result = 1;
-        while (x > 0) {
-            result = result + x * (x - 1);
-            x = x - 2;
 
-        }
-        return result;
-    }
     //3. Take three numbers from the user and print the greatest number.
     //
     //Test Data
@@ -92,163 +52,26 @@ public class Conditional_Statement {
     //The greatest: 87
 
     public static void ex3() {
+
         Scanner in = new Scanner(System.in);
 
-        System.out.println("Input the 1st number:");
-        int num1 = in.nextInt();
-
-        System.out.println("Input the 2nd number: ");
-        int num2 = in.nextInt();
-
-        System.out.println("Input the 3rd number:");
-        int num3 = in.nextInt();
-
-        if (num1 > num2)
-            if (num1 > num3) {
-                System.out.println("The greatest :" + num1);
-            }
-        if (num2 > num1)
-            if (num2 > num3)
-                System.out.println("The greatest :" + num2);
-
-        if (num3 > num1)
-            if (num3 > num2)
-                System.out.println("The greatest :" + num3);
-    }
-
-    public static void ex3bkp1() {
-        double num1 = 5.6;
-        int num2 = 3;
-
-        System.out.println("The largest number of the two numbers is " + Math.max(num1, num2));
-    }
-//How to find largest number in an array in Java?
-
-
-    public static void ex3bkp2() {
-        int n, max;
-        Scanner s = new Scanner(System.in);
-        System.out.println("Enter the number of elements in the array:");
-        n = s.nextInt();
-        int a[] = new int[n];
-        System.out.println("Enter the elements of array:");
-        for (int i = 1; i < n; i++) {
-            a[i] = s.nextInt();
-        }
-        max = a[0];
-        for (int i = 0; i < n; i++) {
-            if (max < a[i]) {
-                max = a[i];
-            }
-        }
-        System.out.println("Maximum value in the array is:" + max);
-    }
-
-    public static void ex3bkp3() {
-        Scanner in = new Scanner(System.in);
-
-        System.out.println("Input the 1st number:");
-        int num1 = in.nextInt();
-
-        System.out.println("Input the 2nd number: ");
-        int num2 = in.nextInt();
-
-        System.out.println("Input the 3rd number:");
-        int num3 = in.nextInt();
-
-        if (num1 > num2) {
-            if (num1 > num3)
-                System.out.println("The greatest number is:" + num1);
-        } else {
-            if (num2 > num3) {
-                System.out.println("The greatest number is:" + num2);
-            } else {
-                System.out.println("The greatest number is" + num3);
-            }
-
-
-        }
-    }
-
-    public static void ex3bkp4() {
-        Scanner in = new Scanner(System.in);
-
-        System.out.println("Input the 1st number:");
+        System.out.println("Input 1st number:");
         int a = in.nextInt();
 
-        System.out.println("Input the 2nd number: ");
+        System.out.println("Input 2nd number: ");
         int b = in.nextInt();
 
-        System.out.println("Input the 3rd number:");
+        System.out.println("Input 3rd number: ");
         int c = in.nextInt();
 
-        int max = 0;
-        int mid = 0;
-        int min = 0;
-
-        if (a > b) {
-            if (a > c) {
-                System.out.println("The greatest number is: " + a);
-                max = a;
-            } else {
-                System.out.println("The greatest number is: " + c);
-                max = c;
-            }
-        } else if (b > c) {
-            System.out.println("The greatest number is: " + b);
-            max = b;
+        if (a > b && a > c) {
+            System.out.println("The greatest : " + a);
+        } else if (b > c && b > a) {
+            System.out.println("The greatest : " + b);
         } else {
-            System.out.println("The greatest number is : " + c);
-            max = c;
+            System.out.println("The greatest: " + c);
         }
-
-        if (max == a) {
-
-
-            if (b > c) {
-                mid = b;
-                min = c;
-            } else {
-                mid = c;
-                min = b;
-            }
-        }
-        if (max == b) {
-            if (a > c) {
-                mid = a;
-                min = c;
-            } else {
-                mid = c;
-                min = b;
-            }
-        }
-        if (max == c) {
-            if (a > b) {
-                mid = a;
-                min = b;
-            } else {
-                mid = b;
-                min = a;
-
-            }
-        }
-        System.out.println(max);
-        System.out.println(mid);
-        System.out.println(min);
-
     }
-
-    public static void ex3bkp5() {
-        int x = 7, y = 3, temp;
-
-        System.out.println("Before: " + x + " , " + y);
-
-        temp = x;
-        x = y;
-        y = temp;
-        System.out.println("After: " + x + " , " + y);
-    }
-
 
     //4. Write a Java program that reads a floating-point number and prints "zero" if the number is zero.
 // Otherwise, print "positive" or "negative". Add "small" if the absolute value of the number is less than 1,
@@ -260,87 +83,28 @@ public class Conditional_Statement {
 //Input value: 25
 //Positive number
     public static void ex4() {
-
         Scanner in = new Scanner(System.in);
 
-        System.out.println("Input a number:");
-        float nr = in.nextFloat();
+        System.out.println("Input a number: ");
+        int num = in.nextInt();
 
-        if (nr > 0) {
-            System.out.println("Nr is positive");
-            if (nr < 1) {
-                System.out.println("pozitiv small number");
-            } else if (nr > 1000000) {
-                System.out.println("pozitiv large number");
-            } else {
-                System.out.println("pozitiv number");
-            }
-
-        } else if (nr < 0) {
-            if (Math.abs(nr) < 1) {
-                System.out.println("Negative small number");
-            } else if (Math.abs(nr) > 1000000) {
-                System.out.println("Negative large number");
-            } else {
-                System.out.println("Negative");
-            }
+        if (num == 0) {
+            System.out.println("zero");
+        }
+        if (num > 0) {
+            System.out.println("Pozitiv number");
         } else {
-            System.out.println("Zero");
+            System.out.println("Number is negativ");
+
+        }
+        if (Math.abs(num) < 1) {
+            System.out.println("small");
+        }
+        if (Math.abs(num) > 1000000) {
+            System.out.println("large");
         }
 
     }
-
-    //SwitchCases
-    public static void ex5bkp1() {
-        int day = 3;
-
-        if (day == 1) {
-            System.out.println("Sunday");
-        } else if (day == 2) {
-            System.out.println("Monday");
-        } else if (day == 3) {
-            System.out.println("Tuesday");
-        } else if (day == 4) {
-            System.out.println("Wednesday");
-        } else if (day == 5) {
-            System.out.println("Thursday");
-        } else if (day == 6) {
-            System.out.println("Friday");
-        } else if (day == 7) {
-            System.out.println("Saturday");
-        }
-    }
-
-    public static void ex5bkp2() {
-        int day = 3;
-        String dayName = "";
-
-        switch (day) {
-            case 1:
-                System.out.println("Sunday");
-                break;
-            case 2:
-                System.out.println("Monday");
-            case 3:
-                System.out.println("Tuesday");
-            case 4:
-                dayName = "Wednesday";
-                break;
-            case 5:
-                dayName = " Thursday";
-                break;
-            case 6:
-                dayName = "Friday";
-                break;
-            case 7:
-                dayName = "Saturday";
-                break;
-            default:
-                dayName = "Invalid day range";
-
-        }
-    }
-
     //6. Write a Java program that reads in two floating-point numbers and tests whether they are the same up to three decimal places. Go to the editor
 //
 //Test Data
@@ -348,26 +112,7 @@ public class Conditional_Statement {
 //Input floating-point another number: 25.589
 //Expected Output :
 //They are different
-    public static void ex6() {
-        Scanner in = new Scanner(System.in);
-        System.out.println("Input floating-point number:");
-        double x = in.nextDouble();
 
-        System.out.println("Input floating-point another number:");
-        double y = in.nextDouble();
-
-        x = Math.round(x * 1000);
-        x = x / 1000;
-
-        y = Math.round(y * 1000);
-        y = y / 1000;
-
-        if (x == y) {
-            System.out.println("They are the same up to three decimal plases");
-        } else {
-            System.out.println("They are different");
-        }
-    }
 
     //7. Write a Java program to find the number of days in a month. Go to the editor
 //
@@ -376,74 +121,7 @@ public class Conditional_Statement {
 //Input a year: 2016
 //Expected Output :
 //February 2016 has 29 days
-    public static void ex7() {
 
-        Scanner in = new Scanner(System.in);
-
-        int number_of_daysInMonth = 0;
-        String MonthOfName = "Unknown";
-
-        System.out.println("Input a month number:");
-        int month = in.nextInt();
-
-        System.out.println("Input a year: ");
-        int year = in.nextInt();
-
-        switch (month) {
-            case 1:
-                MonthOfName = "January";
-                number_of_daysInMonth = 31;
-                break;
-            case 2:
-                MonthOfName = "February";
-                if ((year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0))) {
-                    number_of_daysInMonth = 29;
-                } else {
-                    number_of_daysInMonth = 28;
-                }
-                break;
-            case 3:
-                MonthOfName = "March";
-                number_of_daysInMonth = 31;
-                break;
-            case 4:
-                MonthOfName = "April";
-                number_of_daysInMonth = 30;
-                break;
-            case 5:
-                MonthOfName = "May";
-                number_of_daysInMonth = 31;
-                break;
-            case 6:
-                MonthOfName = "June";
-                number_of_daysInMonth = 30;
-                break;
-            case 7:
-                MonthOfName = "July";
-                number_of_daysInMonth = 31;
-                break;
-            case 8:
-                MonthOfName = "August";
-                number_of_daysInMonth = 31;
-                break;
-            case 9:
-                MonthOfName = "September";
-                number_of_daysInMonth = 30;
-                break;
-            case 10:
-                MonthOfName = "October";
-                number_of_daysInMonth = 31;
-                break;
-            case 11:
-                MonthOfName = "November";
-                number_of_daysInMonth = 30;
-                break;
-            case 12:
-                MonthOfName = "December";
-                number_of_daysInMonth = 31;
-        }
-        System.out.println(MonthOfName + " " + year + "has" + number_of_daysInMonth + "days\n");
-    }
     //8. Write a Java program that takes the user to provide a single character from the alphabet. Print Vowel or Consonant,
     // depending on the user input. If the user input is not a letter (between a and z or A and Z), or is a string of length > 1,
     // print an error message.
@@ -453,72 +131,11 @@ public class Conditional_Statement {
     //Expected Output :
     //Input letter is Consonant
 
-    public static void ex8() {
-
-        Scanner in = new Scanner(System.in);
-
-        System.out.println("Input an alphabet:");
-        String input = in.next().toLowerCase();
-
-        boolean uppercase = input.charAt(0) >= 65 && input.charAt(0) <= 90;
-        boolean lowercase = input.charAt(0) >= 97 && input.charAt(0) <= 122;
-        boolean vowel = input.equals("a") || input.equals("e") || input.equals("i") || input.equals("o") || input.equals("u");
-
-        if (input.length() != 1) {
-            System.out.println(" Error. It is not a caracter");
-        } else if (!(uppercase || lowercase)) {
-            System.out.println("Error. Not a letter. Please insert a  uppercase or a lowercase");
-        } else if (vowel) {
-            System.out.println("Input letter is a vowel");
-
-        } else {
-            System.out.println("Input letter is a consonant");
-        }
-
-
-    }
-
 
     //9.Write a Java program that takes a year from user and print whether that year is a leap year or not.
-    public static void ex9() {
 
-        Scanner in = new Scanner(System.in);
-
-        System.out.println("Input the year: ");
-        int year = in.nextInt();
-
-        boolean x = (year % 4) == 0;
-        boolean y = (year % 100) != 0;
-        boolean z = ((year % 100 == 0) && (year % 400 == 0));
-
-        if (x && (y || z)) {
-            System.out.println(year + "is a leap year");
-        } else {
-            System.out.println(year + "is not a leap year");
-        }
-
-
-    }
 
     //metoda care primeste un int=varsta , daca e sub 18 ani copil, intre 19 si 63 matur , peste 64 inclusiv-pensionar
-    public static void varsta() {
-
-
-        Scanner in = new Scanner(System.in);
-
-        System.out.println("Introdu varsta : ");
-        int varsta = in.nextInt();
-
-        if (varsta < 18) {
-            System.out.println("copil");
-
-        } else if (varsta < 64) {
-            System.out.println("matur");
-        } else {
-            System.out.println("pensionar");
-        }
-
-    }
 
     //10. Write a program in Java to display the first 10 natural numbers. Go to the editor
     //
@@ -532,17 +149,6 @@ public class Conditional_Statement {
     //9
     //10
 
-    public static void ex10() {
-
-        Scanner in = new Scanner(System.in);
-
-        System.out.println("The first 10 natural numbers are :");
-
-
-        for (int i = 1; i <= 10; i++) {
-            System.out.println(i);
-        }
-    }
 
     //11. Write a program in Java to display n terms of natural numbers and their sum. Go to the editor
 //
@@ -1328,16 +934,8 @@ public class Conditional_Statement {
             System.out.println("Numele trebuie sa contina cel putin 3 caractere. \n Introduceti un nume corespunzator: ");
             numele = in.nextLine();
         }
-        System.out.println("Datele dumneavoastra sunt:"+"\nNumele:"+numele+"\nVarsta :"+ varsta+ "\nva rugam sa reveniti pentru " +
-                "reinnoire la varsta de :"+(varsta+10));
-
-    }
-
-
-
-    public static void main(String[] args) {
-        buletin();
-
+        System.out.println("Datele dumneavoastra sunt:" + "\nNumele:" + numele + "\nVarsta :" + varsta + "\nva rugam sa reveniti pentru " +
+                "reinnoire la varsta de :" + (varsta + 10));
 
     }
 
