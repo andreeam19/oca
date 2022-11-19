@@ -1,19 +1,15 @@
 package com.test.w3.exercises;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Test {
     //citesc de la tastaTURA 1 nr . daca e par sa se termine citirea, daca e impar, sa se incerce iar
-    public static void main(String[] args) {
-       for(int num=0;num<=100;num++){
-          if(num==11){
-              num=90;
-
-
-          }
-           System.out.print(num+" ");
-       }
+    public static void main(StringExercices[] args) {
+         StringBuilder sb = new StringBuilder("animals");
+         sb.insert(7, "-"); // sb = animals
+         sb.insert(0, "-"); // sb = -animals
+         sb.insert(4, "-"); // sb = -ani-mals
+        System.out.println(sb);
     }
 
     //1. 2 nr tastatura. afisez nr pare din interval
