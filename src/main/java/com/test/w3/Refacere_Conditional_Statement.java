@@ -29,19 +29,6 @@ public class Refacere_Conditional_Statement {
 
     }
 
-    //2. Write a Java program to solve quadratic equations (use if, else if and else). Go to the editor
-    //
-    //Test Data
-    //Input a: 1
-    //Input b: 5
-    //Input c: 1
-    //Expected Output :
-    //The roots are -0.20871215252208009 and -4.7912878474779195
-    public static void ex2() {
-
-    }
-
-
     //3. Take three numbers from the user and print the greatest number.
     //
     //Test Data
@@ -105,7 +92,8 @@ public class Refacere_Conditional_Statement {
         }
 
     }
-    //6. Write a Java program that reads in two floating-point numbers and tests whether they are the same up to three decimal places. Go to the editor
+    //6. Write a Java program that reads in two floating-point numbers and tests whether they are the same up to
+    // three decimal places. Go to the editor
 //
 //Test Data
 //Input floating-point number: 25.586

@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Conditional_Statement {
     public static void main(String[] args) {
-        ex4();
+        ex6();
     }
 
 
@@ -105,6 +105,7 @@ public class Conditional_Statement {
         }
 
     }
+
     //6. Write a Java program that reads in two floating-point numbers and tests whether they are the same up to three decimal places. Go to the editor
 //
 //Test Data
@@ -112,6 +113,27 @@ public class Conditional_Statement {
 //Input floating-point another number: 25.589
 //Expected Output :
 //They are different
+    public static void ex6() {
+        Scanner in = new Scanner(System.in);
+
+        System.out.println("Input first number:");
+        double x = in.nextDouble();
+
+        System.out.println("Input second number:");
+        double y = in.nextDouble();
+
+        x = Math.round(x * 1000);
+        x = x / 1000;
+
+        x = Math.round(x * 1000);
+        y = y / 1000;
+
+        if (x == y) {
+            System.out.println("They are the same decimal");
+        } else {
+            System.out.println("They are different");
+        }
+    }
 
 
     //7. Write a Java program to find the number of days in a month. Go to the editor
@@ -122,6 +144,7 @@ public class Conditional_Statement {
 //Expected Output :
 //February 2016 has 29 days
 
+
     //8. Write a Java program that takes the user to provide a single character from the alphabet. Print Vowel or Consonant,
     // depending on the user input. If the user input is not a letter (between a and z or A and Z), or is a string of length > 1,
     // print an error message.
@@ -130,6 +153,11 @@ public class Conditional_Statement {
     //Input an alphabet: p
     //Expected Output :
     //Input letter is Consonant
+    public static void ex8() {
+        Scanner in = new Scanner(System.in);
+
+
+    }
 
 
     //9.Write a Java program that takes a year from user and print whether that year is a leap year or not.
