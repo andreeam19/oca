@@ -94,6 +94,8 @@ public class PetShop {
             d.printDogDetails();
         }
         System.out.println("\n");
+        Scanner scanner=new Scanner(System.in);
+        scanner.nextLine();
     }
 
     public static void showMenu() {
