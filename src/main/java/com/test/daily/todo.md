@@ -3,12 +3,9 @@
 formula:    celsius = (5 * (fah-32))/9) 
 test data:   212 fah = 100 celsius
 
-2. Write a Java program that reads an integer greater than 0 and adds all the digits in the integer.
-Do this for an array of numbers and save results into a new array. Then print that array
-TEST DATA: int[] array={123,345,567,111111111, 22222, 9090, 1 ,0}
+2. Write a Java program that reads an integer between 0 and 1000 and adds all the digits in the integer.
 
-4. Write program that prints an array without the midle element.
-int[] array = {1,2,3,4,5,6};
+3. Write a Java program to convert minutes into a number of years and days.
 
 5. Take three numbers from the user and print the greatest number. 
 TODO: use function    int greatest(int n1, int n2)
@@ -19,7 +16,7 @@ Otherwise, print "positive" or "negative". Add "small" if the absolute value of 
 # Exercises set 2
 1. Write a program to print all odd numbers from 10 to 30.
 
-2. Write a program that reads a number from input and adds all numbers up to it.
+2. Write a program in Java to display n terms of natural numbers and their sum.
 
 3. Write a program that reverses a String input.
 
